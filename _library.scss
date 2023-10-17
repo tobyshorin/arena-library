@@ -1,0 +1,58 @@
+.library-content{
+	padding: 10px;
+	display:flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: start;
+	gap: 40px;
+	@media(min-width:800px){
+		padding: 40px 160px;
+	}
+	.library-inner{
+		display:grid;
+		row-gap: $base-line-height*2;
+		@media(min-width:800px){
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* adjust 200px to your book's minimum width */
+			grid-gap: 40px; 
+			// row-gap:auto;
+		}
+	}
+}
+
+.book-cover{
+	opacity:0;
+	transition: opacity 0.5s;
+	display: block;
+	position: relative;
+	.picture{
+		display: block;
+		position:relative;
+		width: 100%;
+		@media(min-width:800){
+		}
+	}
+}
+
+
+.book-title{
+	font-weight:700;
+	color: var(--title-color);
+	margin: $base-line-height 0px;
+}
+.book-description{
+}
+
+.year-text{
+	opacity:0;
+	transition: opacity 0.5s;
+	font-weight: 900;
+	color: var(--font-color);
+	font-size: 48px;
+	line-height: 1.1;
+}
+
+
+.visible {
+	opacity: 1;
+}
